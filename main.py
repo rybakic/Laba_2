@@ -8,7 +8,9 @@ def test():
     while True:
         response = requests.get("https://blockchain.info/ru/ticker").text
         d = json.loads(response)
-        print(d['USD'])
-        time.sleep(5)
+        print(d[currency]['buy'])
+        time.sleep(2)
 
+
+currency = input()
 test()
